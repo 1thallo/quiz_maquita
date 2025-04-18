@@ -57,7 +57,8 @@ class Quiz {
     }
 
     mostrarResultado = () => {
-        this.resultado.textContent = 
+        const nomeFerramenta = fer
+        this.resultado.textContent = `Você é uma ${}` 
     }
 
 

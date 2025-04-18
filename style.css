@@ -1,0 +1,158 @@
+/* Estilos gerais */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Estilização do navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.navbar-brand i {
+  color: #dc3545;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #dc3545;
+}
+
+/* Container principal */
+.container {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Estilos para elementos de texto */
+h1, h3, h4 {
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.display-5 {
+  font-weight: 600;
+  color: #212529;
+}
+
+.lead {
+  line-height: 1.6;
+}
+
+/* Estilo para imagem */
+img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Botão do quiz */
+.btn-danger {
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2);
+}
+
+.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-danger:active {
+  transform: translateY(1px);
+}
+
+/* Divisores */
+hr {
+  border-top: 1px solid #dee2e6;
+  opacity: 0.5;
+  margin: 2rem 0;
+}
+
+/* Seção de finalidade do projeto */
+.container h3 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  color: #495057;
+  line-height: 1.7;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #dc3545 !important;
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 1.8rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+  
+  .btn-danger .display-5 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animação para o botão */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.btn-danger {
+  animation: pulse 2s infinite;
+}
+
+/* Efeito de hover nos cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe para fade-in em elementos */
+.fade-in {
+  animation: fadeIn 1s ease;
+}

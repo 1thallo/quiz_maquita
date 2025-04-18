@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
         this.respostas = [];
         this.resultadoEl.innerHTML = "";
         this.container.innerHTML = "";
+
+        // Reexibe botão de iniciar e centraliza scroll
         this.botao.style.display = "block";
         window.scrollTo({ top: 0, behavior: "smooth" });
       };

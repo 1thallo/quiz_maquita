@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       const imagens = {
-        Martelo: "../../assets/ferramentas/martelo.png",
-        "Chave de fenda": "../../assets/ferramentas/chave-de-fenda.png",
-        Alicate: "../../assets/ferramentas/alicate.png",
-        Serrote: "../../assets/ferramentas/serrote.png",
-        Trena: "../../assets/ferramentas/trena.png"
+        Martelo: "assets/ferramentas/martelo.png",
+        "Chave de fenda": "assets/ferramentas/chave-de-fenda.png",
+        Alicate: "assets/ferramentas/alicate.png",
+        Serrote: "assets/ferramentas/serrote.png",
+        Trena: "assets/ferramentas/trena.png"
       };
 
       this.resultadoEl.className = "quiz-result";

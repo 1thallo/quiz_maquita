@@ -1,3 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -107,7 +122,8 @@ footer a:hover {
 
 .quiz-question {
   margin-bottom: 25px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 550;
 }
 
 .quiz-answer-btn {
@@ -119,6 +135,14 @@ footer a:hover {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
+  border-radius: 8px; /* Bordas arredondadass */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-answer-btn:hover {
+  border-color: #f63a59; 
+  background-color: #e2c0c6;
+  transform: translateY(-3px); 
 }
 
 .quiz-result {
@@ -144,9 +168,16 @@ footer a:hover {
 }
 
 .quiz-refazer-btn {
-  margin-top: 250px;
+  margin-top: 100px;
   padding: 12px 28px;
   font-size: 1.1rem;
   cursor: pointer;
+  background-color: #f63a59;
+  color: #dee2e6;
+  border-radius: 8px;
+  display: block; /* Alteração de inline-block para block */
+  margin-left: auto; /* Centraliza o botão */
+  margin-right: auto; /* Centraliza o botão */
+  width: fit-content; /* Ajusta a largura do botão conforme o conteúdo */
 }
 

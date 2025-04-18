@@ -104,7 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
         this.container.innerHTML = "";
 
         // Reexibe botão de iniciar e centraliza scroll
-        this.botao.style.display = "block";
+        this.botao.style.display = "inline-block";
+        this.botao.className = "btn btn-danger btn-lg mt-3";
+        this.container.appendChild(this.botao);
         window.scrollTo({ top: 0, behavior: "smooth" });
       };
 

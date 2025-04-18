@@ -56,8 +56,8 @@ class Quiz {
         return ferramentaVencedora
     }
 
-    mostrarResultado = () => {
-        const nomeFerramenta = fer
+    mostrarResultado = (ferramenta) => {
+        const nomeFerramenta = ferramenta.charAt(0).toUpperCase() + ferramenta.slice(1)
         this.resultado.textContent = `Você é uma ${}` 
     }
 

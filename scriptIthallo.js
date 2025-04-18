@@ -42,7 +42,24 @@ class Quiz {
     }
 
     // tem que retornar a ferramenta vencedora aqui
-    @returns {string}
+        @returns {string}
+    ferramentaVencedora = () => {
+        let maiorPontuacao = 0;
+        let ferramentaVencedora = ''
+
+        for (let ferramenta of this.ferramentas){
+            if (this.pontos[ferramenta] > maiorPontuacao)
+                maiorPontuacao = this.pontos[ferramenta]
+                ferramentaVencedora = ferramenta
+        }
+
+        return ferramentaVencedora
+    }
+
+    mostrarResultado = () => {
+        this.resultado.textContent = 
+    }
+
 
     
 

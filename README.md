@@ -56,9 +56,9 @@ quiz-maquita/
 ## 🎓 Finalidade Acadêmica
 
 Este projeto foi desenvolvido com foco no aprendizado prático de conceitos como:
+- Sintaxe do JavaScript
 - Manipulação do DOM com JavaScript
-- Estruturação semântica com HTML
-- Estilização responsiva com CSS e Bootstrap
+- POO (Programação Orientada a Objetos) com JavaScript
 
 ## 📎 Links do Projeto
 

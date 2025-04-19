@@ -62,7 +62,7 @@ Este projeto foi desenvolvido com foco no aprendizado prático de conceitos como
 
 ## 📎 Links do Projeto
 
-🔗 [Repositório no GitHub](https://github.com/ianfelps/quiz_maquita)
+🔗 [Repositório no GitHub](https://github.com/ianfelps/quiz_maquita)  
 🌐 [Link do Deploy](https://ianfelps.github.io/quiz_maquita/)
 
 ---

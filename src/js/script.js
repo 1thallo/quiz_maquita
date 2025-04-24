@@ -1,68 +1,68 @@
 document.addEventListener("DOMContentLoaded", function () {
   class Quiz {
     constructor(perguntas) {
-      this.perguntas = perguntas;
-      this.indice = 0;
-      this.respostas = [];
+      this.perguntas = perguntas
+      this.indice = 0
+      this.respostas = []
 
-      this.container = document.getElementById("quiz-area");
-      this.resultadoEl = document.getElementById("result");
-      this.botao = document.getElementById("startBtn");
+      this.container = document.getElementById("quiz-area")
+      this.resultadoEl = document.getElementById("result")
+      this.botao = document.getElementById("startBtn")
 
-      this.container.className = "quiz-wrapper";
+      this.container.className = "quiz-wrapper"
 
-      this.botao.addEventListener("click", () => this.mostrarPergunta());
+      this.botao.addEventListener("click", () => this.mostrarPergunta())
     }
 
     mostrarPergunta() {
-      this.resultadoEl.innerHTML = "";
-      this.botao.style.display = "none";
-      this.container.innerHTML = "";
+      this.resultadoEl.innerHTML = ""
+      this.botao.style.display = "none"
+      this.container.innerHTML = ""
 
-      const atual = this.perguntas[this.indice];
+      const atual = this.perguntas[this.indice]
 
-      const perguntaEl = document.createElement("p");
-      perguntaEl.textContent = `${this.indice + 1}. ${atual.question}`;
-      perguntaEl.className = "quiz-question";
-      this.container.appendChild(perguntaEl);
+      const perguntaEl = document.createElement("p")
+      perguntaEl.textContent = `${this.indice + 1}. ${atual.question}`
+      perguntaEl.className = "quiz-question"
+      this.container.appendChild(perguntaEl)
 
       atual.answers.forEach((resposta) => {
-        const botao = document.createElement("button");
-        botao.textContent = resposta.text;
-        botao.className = "quiz-answer-btn";
-        botao.onclick = () => this.selecionar(resposta.type);
-        this.container.appendChild(botao);
-      });
+        const botao = document.createElement("button")
+        botao.textContent = resposta.text
+        botao.className = "quiz-answer-btn"
+        botao.onclick = () => this.selecionar(resposta.type)
+        this.container.appendChild(botao)
+      })
     }
 
     selecionar(tipo) {
-      this.respostas.push(tipo);
-      this.indice++;
+      this.respostas.push(tipo)
+      this.indice++
 
       if (this.indice < this.perguntas.length) {
-        this.mostrarPergunta();
+        this.mostrarPergunta()
       } else {
-        this.mostrarResultado();
+        this.mostrarResultado()
       }
     }
 
     mostrarResultado() {
-      this.container.innerHTML = "";
-      this.resultadoEl.innerHTML = "";
+      this.container.innerHTML = ""
+      this.resultadoEl.innerHTML = ""
 
-      const contagem = {};
+      const contagem = {}
 
       this.respostas.forEach((tipo) => {
-        contagem[tipo] = (contagem[tipo] || 0) + 1;
-      });
+        contagem[tipo] = (contagem[tipo] || 0) + 1
+      })
 
-      let maisEscolhido = "";
-      let maior = 0;
+      let maisEscolhido = ""
+      let maior = 0
 
       for (let tipo in contagem) {
         if (contagem[tipo] > maior) {
-          maior = contagem[tipo];
-          maisEscolhido = tipo;
+          maior = contagem[tipo]
+          maisEscolhido = tipo
         }
       }
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Alicate: "Você é versátil e resolve qualquer parada.",
         Serrote: "Você é paciente, persistente e eficiente.",
         Trena: "Você é planejador, estratégico e organizado."
-      };
+      }
 
       const imagens = {
         Martelo: "assets/ferramentas/martelo.png",
@@ -80,37 +80,36 @@ document.addEventListener("DOMContentLoaded", function () {
         Alicate: "assets/ferramentas/alicate.png",
         Serrote: "assets/ferramentas/serrote.png",
         Trena: "assets/ferramentas/trena.png"
-      };
+      }
 
-      this.resultadoEl.className = "quiz-result";
+      this.resultadoEl.className = "quiz-result"
       this.resultadoEl.innerHTML = `
         <strong>${maisEscolhido}</strong><br>
         ${mensagens[maisEscolhido]}
-      `;
+      `
 
-      const img = document.createElement("img");
-      img.src = imagens[maisEscolhido];
-      img.alt = maisEscolhido;
-      this.resultadoEl.appendChild(img);
+      const img = document.createElement("img")
+      img.src = imagens[maisEscolhido]
+      img.alt = maisEscolhido
+      this.resultadoEl.appendChild(img)
 
-      const botaoRefazer = document.createElement("button");
-      botaoRefazer.textContent = "Refazer Quiz";
-      botaoRefazer.className = "quiz-refazer-btn";
+      const botaoRefazer = document.createElement("button")
+      botaoRefazer.textContent = "Refazer Quiz"
+      botaoRefazer.className = "quiz-refazer-btn"
 
       botaoRefazer.onclick = () => {
-        this.indice = 0;
-        this.respostas = [];
-        this.resultadoEl.innerHTML = "";
-        this.container.innerHTML = "";
+        this.indice = 0
+        this.respostas = []
+        this.resultadoEl.innerHTML = ""
+        this.container.innerHTML = ""
 
-        // Reexibe botão de iniciar e centraliza scroll
-        this.botao.style.display = "inline-block";
-        this.botao.className = "btn btn-danger btn-lg mt-3";
-        this.container.appendChild(this.botao);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      };
+        this.botao.style.display = "inline-block"
+        this.botao.className = "btn btn-danger btn-lg mt-3"
+        this.container.appendChild(this.botao)
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      }
 
-      this.resultadoEl.appendChild(botaoRefazer);
+      this.resultadoEl.appendChild(botaoRefazer)
     }
   }
 
@@ -215,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { text: "Organiza os passos da equipe.", type: "Trena" }
       ]
     }
-  ];
+  ]
 
-  new Quiz(perguntas);
-});
+  new Quiz(perguntas)
+})

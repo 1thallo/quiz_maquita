@@ -65,6 +65,8 @@ Este projeto foi desenvolvido com foco no aprendizado prático de conceitos como
 🔗 [Repositório no GitHub](https://github.com/ianfelps/quiz_maquita)  
 🌐 [Link do Deploy](https://ianfelps.github.io/quiz_maquita/)
 
+![QR Code do Site](./assets/img/qrcode.png)
+
 ---
 
 O Quiz Maquita foi criado como parte de um projeto acadêmico da disciplina de Programação Web, na **Universidade Católica de Brasília (UCB)**.

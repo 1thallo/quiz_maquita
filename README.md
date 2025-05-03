@@ -21,7 +21,6 @@ Será que você é o **Martelo** – aquele que resolve tudo com um golpe certei
 - CSS3
 - JavaScript
 - Bootstrap 5
-- Bootstrap Icons
 
 ## 📂 Estrutura do Projeto
 

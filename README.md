@@ -35,8 +35,7 @@ quiz-maquita/
 │   └── js/
 │       └── script.js # Lógica do quiz
 ├── assets/
-│   └── img/
-│       └── icon.png  # Ícone e imagem ilustrativa
+│   └── img/          # Imagens utilizadas no projeto 
 ```
 
 ## 🧪 Como Executar
